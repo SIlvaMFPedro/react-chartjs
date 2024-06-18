@@ -1,6 +1,6 @@
-import logo from './logo.svg';
 import React, {useState} from 'react';
 import { getData } from './utils/functions';
+import Table from './components/dashboard/Table';
 import BarChart from './components/dashboard/BarChart';
 import LineChart from './components/dashboard/LineChart';
 import DoughtnutChart from './components/dashboard/DoughnutChart';
@@ -25,6 +25,8 @@ class App extends React.Component {
     render() {
       return (
         <div className="App">
+          <h1>Dashboard Table</h1>
+          <Table/>
           <div className="main chart-wrapper">
             <LineChart
               data={this.state.data[0].data}
